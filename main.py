@@ -71,8 +71,7 @@ def main():
              "gossip", "onyx", "calix", "voodoo", "gnarly", "unfixable", 
              "wizard", "microwave", "jaywalk", "rhythem", "iceberg", "titanic", 
              "jazz", "guitar", "buckaroo", "buddy", "embezzeled","fishook", 
-             "beekeeper", "ballistic", "maneuver", "resuscitate","judgment", 
-             "shorty", "baddie", "doctor"]
+             "beekeeper", "ballistic", "maneuver", "resuscitate","judgment", "shorty", "baddie", "doctor"]
 #Hannah - Wrong guesses
  
 wrong_guesses = 0
