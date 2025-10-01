@@ -3,50 +3,57 @@
 import random
 #Isaiah - Making Board
 def hangman(wrong):
-    if wrong == 6:
-     print("""___
-            |  O
-            | /|\\
-            |  /\\
+    if wrong == 0:
+     print("""
+            |__|
+            |  
+            | 
+            |  
             |______
     """)    
-    elif wrong  == 5:
-     print("""___
+    elif wrong  == 1:
+     print("""
+            |__|
             |  O
-            | /|\\
-            |  /
+            | 
+            |  
             |______
            """)   
     
-    elif wrong == 4:
-        print ("""___
+    elif wrong == 2:
+        print ("""
+                 |__|
                  |  O
-                 | /|\\
+                 |  |
                  | 
                  |______""")
     elif wrong == 3:
-        print("""___
+        print("""
+                |__|
                 |  O
                 | /|
                 | 
                 |______""")
-    elif wrong == 2:
-        print("""___
+    elif wrong == 4:
+        print("""
+                |__|
                 |  O
-                | /
+                | /|\\
                 | 
                 |______""")
-    elif wrong == 1:
-        print("""___
+    elif wrong == 5:
+        print("""
+                |__|
                 |  O
-                | 
-                | 
+                | /|\\
+                | /
                 |______""")
     else:
-        print("""___
-                |  
-                | 
-                | 
+        print("""
+                |__|
+                |  0
+                | /|\\
+                | /\\
                 |______""")
 
 
@@ -86,11 +93,8 @@ def main():
     current_word = random.choice(bank)
     play = "play"
     while play == "play":
-
-        print(f"Hangman{wrong_guesses}")
-
+        hangman(wrong_guesses)
         print(current(guessed_letters, current_word))
-
         letter = guess()
         guessed_letters.append(letter)
 
@@ -112,6 +116,7 @@ def main():
             print("you lose!")
             play = "lose"
 #Enzo - Print/play again rand letter
+main()
 
 again = input("do you want to play again?(yes/no)?/n").strip().lower()
 if again == "yes":
